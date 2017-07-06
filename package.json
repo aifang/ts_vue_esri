@@ -24,7 +24,9 @@
   },
   "devDependencies": {
     "cross-env": "^5.0.1",
+    "html-webpack-plugin": "^2.29.0",
     "ts-loader": "^2.2.2",
+    "typescript": "^2.4.1",
     "webpack": "^3.0.0",
     "webpack-dev-server": "^2.5.0"
   }

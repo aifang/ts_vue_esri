@@ -1,5 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: './src/main.ts',
@@ -35,12 +36,20 @@ module.exports = {
         extensions: ['.ts', '.tsx', '.js', 'html'],
         alias: {
             'vue$': 'vue/dist/vue.common.js',
-	        'vue-router$': 'vue-router/dist/vue-router.common.js'
+            'vue-router$': 'vue-router/dist/vue-router.common.js'
         }
     },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: __dirname + "/src/index.html"
+        }),
+        new webpack.HotModuleReplacementPlugin()//热加载插件
+    ],
     devServer: {
         historyApiFallback: true,
-        noInfo: true
+        noInfo: true,
+        hot: true,
+        contentBase:"./dist"
     },
     performance: {
         hints: false
