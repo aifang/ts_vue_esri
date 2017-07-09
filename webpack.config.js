@@ -6,7 +6,6 @@ module.exports = {
     entry: './src/main.ts',
     output: {
         path: path.resolve(__dirname, './dist'),
-        publicPath: '/dist/',
         filename: 'build.js'
     },
     module: {
@@ -16,20 +15,21 @@ module.exports = {
                 loader: 'ts-loader',
                 exclude: /node_modules/
             },
-            // {
-            //     test: /\.html$/,
-            //     loader: 'html-loader',
-            //     exclude: /node_modules/
-            // },
-            // {
-            //     test: /\.css$/,
-            //     loader: 'style-loader!css-loader'
-            // },
-            // {
-            //     test: /\.(eot|svg|ttf|woff|woff2)(\?\S*)?$/,
-            //     loader: 'file-loader'
-            // },
-        ]
+            {
+                test: /\.html$/,
+                loader: 'html-loader',
+                exclude: /node_modules/
+            },
+            {
+                test: /\.css$/,
+                loader: 'style-loader!css-loader'
+            },
+            {
+                test: /\.(eot|svg|ttf|woff|woff2)(\?\S*)?$/,
+                loader: 'file-loader'
+            },
+        ],
+        // noParse: /esri\/map/
     },
     resolve: {
         // Add `.ts` and `.tsx` as a resolvable extension.
@@ -38,6 +38,9 @@ module.exports = {
             'vue$': 'vue/dist/vue.common.js',
             'vue-router$': 'vue-router/dist/vue-router.common.js'
         }
+    },
+    externals: {
+        "esri": "esri"
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -49,7 +52,7 @@ module.exports = {
         historyApiFallback: true,
         noInfo: true,
         hot: true,
-        contentBase:"./dist"
+        contentBase: "./dist"
     },
     performance: {
         hints: false
