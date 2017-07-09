@@ -13,7 +13,7 @@ let app = new Vue({
     data: function () {
         return { visible: false }
     }
-}); 
+});
 
 
 
