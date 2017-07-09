@@ -19,7 +19,7 @@ let app = new Vue({
 
 esriLoader.dojoRequire(["esri/map"], (Map) => {
     let map = new Map("map", {
-        center: [-118, 34.5],
+        center: [-118, 34.50],
         zoom: 8,
         basemap: "dark-gray"
     });
