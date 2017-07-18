@@ -60,3 +60,7 @@ typings/
 #build
 build/
 dist/
+
+libEsri/
+libs/
+package-lock.json
