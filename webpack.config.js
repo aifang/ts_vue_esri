@@ -11,9 +11,19 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.tsx?$/,
+                test: /\.ts$/,
+                exclude: /node_modules|vue\/src/,
                 loader: 'ts-loader',
-                exclude: /node_modules/
+                options: {
+                    appendTsSuffixTo: [/\.vue$/]
+                }
+            },
+            {
+                test: /\.vue$/,
+                loader: 'vue-loader',
+                options: {
+                    esModule: true
+                }
             },
             {
                 test: /\.html$/,
@@ -38,9 +48,6 @@ module.exports = {
             'vue$': 'vue/dist/vue.common.js',
             'vue-router$': 'vue-router/dist/vue-router.common.js'
         }
-    },
-    externals: {
-        "esri": "esri"
     },
     plugins: [
         new HtmlWebpackPlugin({

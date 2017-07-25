@@ -1,6 +1,5 @@
 import * as Vue from 'vue';
 import * as VueRouter from 'vue-router'
-//import _ from 'lodash';
 // import * as ElementUI from 'element-ui'
 // import 'element-ui/lib/theme-default/index.css';
 import routes from './routes'
@@ -17,6 +16,6 @@ const app = new Vue({
     router:router,
     el: '#app',
     data: function () {
-        return { visible: false }
+        return { name: false }
     }
 });
