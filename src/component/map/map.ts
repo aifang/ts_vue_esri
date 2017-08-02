@@ -11,12 +11,15 @@ export default class MyComponent extends Vue {
     onClick(): void {
         window.alert(this.message);
         console.log('aaaa');
-        esriLoader.dojoRequire(["esri/map"], (Map) => {
-            let map = new Map("map", {
-                center: [-118, 34.50],
-                zoom: 8,
-                basemap: "dark-gray"
+
+    }
+    mounted() {
+        this.$nextTick(() => {
+            esriLoader.dojoRequire(["esri/map", "esri/layers/ArcGISDynamicMapServiceLayer"], (Map, ArcGISDynamicMapServiceLayer) => {
+                let map = new Map("map");
+                let layer = new ArcGISDynamicMapServiceLayer("http://192.168.12.25:6080/arcgis/rest/services/bigData/Img2014/MapServer");
+                map.addLayer(layer);
             });
-        });
+        })
     }
 }

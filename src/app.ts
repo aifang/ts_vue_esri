@@ -8,12 +8,12 @@ import routes from './routes'
 Vue.use(VueRouter)
 
 const router = new VueRouter({
-  routes: routes
+    routes: routes
 })
 
 
 const app = new Vue({
-    router:router,
+    router: router,
     el: '#app',
     data: function () {
         return { name: false }

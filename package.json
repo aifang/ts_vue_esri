@@ -35,7 +35,7 @@
     "ts-loader": "^2.2.2",
     "typescript": "^2.4.1",
     "vue-loader": "^13.0.2",
-    "vue-template-compiler": "^2.3.4",
+    "vue-template-compiler": "~2.3.4",
     "webpack": "^3.0.0",
     "webpack-dev-server": "^2.5.0"
   }
