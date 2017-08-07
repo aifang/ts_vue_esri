@@ -10,7 +10,7 @@ export default class MyComponent extends Vue {
     // 组件方法也可以直接声明为实例的方法
     onClick(): void {
         window.alert(this.message);
-        console.log('aaaa');
+        console.log(this.tableData);
 
     }
     mounted() {
