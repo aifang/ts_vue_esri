@@ -16,6 +16,21 @@
         </p>
         <router-view></router-view>
     </div>
+    <script>
+        var _basePath = '../../';
+        var dojoConfig = {
+            parseOnLoad: false,
+            paths: {
+                jquery: "libs/jquery/jquery.min",
+                lodash: "libs/lodash/lodash.min"
+            },
+            packages: [
+                { name: "gis", location: _basePath+"gis" }
+            ]
+        };
+    </script>
+    <!-- <script type="text/javascript" src="../libs/esri/dojo/dojo.js" data-dojo-config="deps : ['main/timeSliderMap', 'dojo/domReady!']"></script> -->
+
     <script type="text/javascript" src="../libEsri/dojo/dojo.js" data-esri-loader="loaded"></script>
 </body>
 
