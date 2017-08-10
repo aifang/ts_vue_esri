@@ -21,7 +21,7 @@ export default class search extends Vue {
     onClick(): void {
         this.$message(this.input2)
         console.log(this.layer)
-        this.layerList.seacrchFeature('你好', '*', this.layer.url);
+        this.layerList.seacrchFeature('你好', '*', this.layer);
     }
     mounted() {
         esriLoader.dojoRequire(["gis/layerList"], (layerList) => {
