@@ -2,6 +2,7 @@ import * as Vue from 'vue'
 import Component from 'vue-class-component'
 import esriLoader from 'esri-loader'
 import search from "../search/search.vue";
+import esri from "esri";
 
 // @Component 修饰符注明了此类为一个 Vue 组件
 @Component({
@@ -25,7 +26,8 @@ export default class MyComponent extends Vue {
     mounted() {
         this.$nextTick(() => {
             esriLoader.dojoRequire(["esri/map", "esri/layers/ArcGISDynamicMapServiceLayer"], (Map, ArcGISDynamicMapServiceLayer) => {
-                this.map = new Map("map");
+                let opt: esri.MapOptions = { showLabels: false, showAttribution: false}
+                this.map = new Map("map",opt);
                 this.layer = new ArcGISDynamicMapServiceLayer("http://192.168.12.25:6080/arcgis/rest/services/bigData/Img2014/MapServer");
                 this.map.addLayer(this.layer);
             });

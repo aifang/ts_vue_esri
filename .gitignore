@@ -63,4 +63,4 @@ dist/
 
 libEsri/
 libs/
-package-lock.json
+/package-lock.json
