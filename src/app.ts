@@ -14,8 +14,5 @@ const router = new VueRouter({
 
 const app = new Vue({
     router: router,
-    el: '#app',
-    data: function () {
-        return { name: '你好' }
-    }
+    el: '#app'
 });
