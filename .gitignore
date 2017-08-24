@@ -64,3 +64,4 @@ dist/
 libEsri/
 libs/
 /package-lock.json
+/.idea
