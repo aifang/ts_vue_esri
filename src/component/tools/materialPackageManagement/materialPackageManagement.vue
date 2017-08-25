@@ -25,7 +25,7 @@
             </el-row>
         </div>
         <div class="tab_pane">
-            <el-tabs v-model="activeName2" type="card" @tab-click="handleClick">
+            <el-tabs v-model="activeName" type="card" @tab-click="handleClick">
                 <el-tab-pane label="用户管理" name="first">用户管理</el-tab-pane>
                 <el-tab-pane label="配置管理" name="second">配置管理</el-tab-pane>
                 <el-tab-pane label="角色管理" name="third">角色管理</el-tab-pane>
@@ -54,7 +54,7 @@
                     :current-page="currentPage4"
                     :page-sizes="[100, 200, 300, 400]"
                     :page-size="100"
-                    layout="total, sizes, prev, pager, next, jumper"
+                    layout="sizes, prev, pager, next, jumper"
                     :total="400">
             </el-pagination>
         </div>
@@ -63,6 +63,7 @@
 <style>
     .search-tool{margin-bottom: 5px;}
     .tab_pane{margin-top: 3px;}
+    .search-tool .el-input{width:100%;}
 </style>
 <script>
     export default {

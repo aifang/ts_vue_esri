@@ -16,14 +16,14 @@
             <el-dialog title="打印出图" :visible.sync="printOutPicture">
                 <print-out-picture></print-out-picture>
             </el-dialog>
-            <el-dialog title="搜索定位" :visible.sync="landDialog" size="tiny">
+            <el-dialog title="搜索定位" :visible.sync="landDialog" size="small">
                 <land-search></land-search>
             </el-dialog>
         </div>
     </div>
 </template>
 <style>
-    .tools{position: absolute;width:800px;height:40px;left:50%;top:5px;margin-left:-400px;text-align: center;}
+    .tools{position: absolute;width:700px;height:40px;left:50%;top:5px;margin-left:-350px;text-align: center;}
     .dialog{text-align: left;}
 </style>
 <script>

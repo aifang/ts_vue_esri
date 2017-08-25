@@ -28,7 +28,7 @@
             <el-pagination
                     @size-change="handleSizeChange"
                     @current-change="handleCurrentChange"
-                    :current-page.sync="currentPage3"
+                    :current-page.sync="currentPage"
                     :page-size="20"
                     layout="prev, pager, next, jumper"
                     :total="100">
@@ -45,6 +45,7 @@
         data() {
             return {
                 input:'',
+                currentPage:1,
                 gridData: [{
                     date: '2016-05-02',
                     name: '王小虎',
@@ -85,6 +86,12 @@
             },
             editClick(){
 
+            },
+            handleSizeChange(val) {
+                console.log(`每页 ${val} 条`);
+            },
+            handleCurrentChange(val) {
+                console.log(`当前页: ${val}`);
             }
         }
     }
