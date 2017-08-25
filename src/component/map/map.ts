@@ -4,12 +4,14 @@ import esriLoader from 'esri-loader'
 import search from "../search/search.vue";
 import esri from "esri";
 import tools from "../tools/tools.vue";
+import infoSearch from "../tools/infoSearch/infoSearch.vue";
 
 // @Component 修饰符注明了此类为一个 Vue 组件
 @Component({
     components: {//子组件声明
         "search": search,
-        "tools": tools
+        "tools": tools,
+        "infoSearch": infoSearch
     },
     // props: {
     //     layer:Object

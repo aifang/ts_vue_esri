@@ -25,6 +25,7 @@
 <style>
     .tools{position: absolute;width:700px;height:40px;left:50%;top:5px;margin-left:-350px;text-align: center;}
     .dialog{text-align: left;}
+    .tools .dialog .el-dialog__body{padding:15px 15px;}
 </style>
 <script>
     import ElDialog from "../../../node_modules/element-ui/packages/dialog/src/component.vue";

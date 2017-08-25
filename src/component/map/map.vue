@@ -2,6 +2,7 @@
     <div>
         <search :layer="layer"></search>
         <tools></tools>
+        <info-search></info-search>
         <div id="map" class="big-map"></div>
     </div>
 </template>
