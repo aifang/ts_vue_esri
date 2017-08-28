@@ -14,7 +14,7 @@
     </div>
 </template>
 <style>
-    .search{position: absolute;width:30%;height:30px;left:10px;top:5px;}
+    .search{position: absolute;width:30%;height:30px;left:10px;top:5px;z-index: 2;}
     .my-autocomplete li{line-height: normal;padding: 7px;}
     .my-autocomplete li .name { text-overflow: ellipsis;  overflow: hidden;}
     .my-autocomplete li .addr { font-size: 12px; color: #b4b4b4;}
