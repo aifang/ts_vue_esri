@@ -12,10 +12,7 @@ import infoSearch from "../tools/infoSearch/infoSearch.vue";
         "search": search,
         "tools": tools,
         "infoSearch": infoSearch
-    },
-    // props: {
-    //     layer:Object
-    // }
+    }
 })
 export default class MyComponent extends Vue {
     [x: string]: any;
@@ -25,7 +22,7 @@ export default class MyComponent extends Vue {
     mounted() {
         this.$nextTick(() => {
             esriLoader.dojoRequire(["esri/map", "esri/layers/ArcGISDynamicMapServiceLayer"], (Map, ArcGISDynamicMapServiceLayer) => {
-                let opt: esri.MapOptions = { showLabels:false, showAttribution: true,slider:false,logo:false,isPan:false,force3DTransforms:true,isKeyboardNavigation:true}
+                let opt: esri.MapOptions = { showLabels:false, showAttribution: true,slider:false,logo:false,force3DTransforms:true}
                 this.map = new Map("map",opt);
                 this.layer = new ArcGISDynamicMapServiceLayer("http://192.168.12.25:6080/arcgis/rest/services/bigData/Img2014/MapServer");
                 this.map.addLayer(this.layer);
