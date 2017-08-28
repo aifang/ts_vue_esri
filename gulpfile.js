@@ -3,9 +3,9 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     webpackConfig = require("./webpack.config.js"),
     sourcemaps = require('gulp-sourcemaps'),
-    ts = require('gulp-typescript');
+    ts = require('gulp-typescript')  ;   
 
-var tsProject = ts.createProject('tsconfig.json');
+var tsProject = ts.createProject('tsconfig.json')  ;
 
 // gulp.task('webpack', function () {
 //     return gulp.src('./src/app.ts')

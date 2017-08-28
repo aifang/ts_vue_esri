@@ -22,7 +22,7 @@ function seacrchFeature(a, b, lyrServer: ArcGISDynamicMapServiceLayer) {
 }
 function showFindResult(queryResult:FindResult[]) {
     if (queryResult.length == 0) {
-        alert("没有该元素.");
+        alert("没有该元素.测试");
         return;
     }
     return queryResult;
