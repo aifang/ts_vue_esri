@@ -23,7 +23,7 @@
     </div>
 </template>
 <style>
-    .tools{position: absolute;width:700px;height:40px;left:50%;top:5px;margin-left:-350px;text-align: center;}
+    .tools{position: absolute;width:700px;height:40px;left:50%;top:5px;margin-left:-350px;text-align: center;z-index: 1;}
     .dialog{text-align: left;}
     .tools .dialog .el-dialog__body{padding:15px 15px;}
 </style>

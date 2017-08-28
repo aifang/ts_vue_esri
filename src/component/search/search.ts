@@ -24,6 +24,7 @@ export default class search extends Vue {
 
     state3: string = ''
     restaurants: any
+
     @Prop()
     layer: any
 
