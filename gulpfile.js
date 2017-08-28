@@ -22,7 +22,8 @@ gulp.task('ts', function () {
     return tsResult.js
         .pipe(uglify())
         .pipe(sourcemaps.write('../sourcemaps'))
-        .pipe(gulp.dest('dist/gis'));
+        .pipe(gulp.dest('dist/gis'))
+        .on('finish',()=>{console.log('地图模块编译完成')});
 });
 
 
